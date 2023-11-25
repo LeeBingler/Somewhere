@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Arapey:ital@0;1&family=Audiowide&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 :root {
     overflow-x: hidden;

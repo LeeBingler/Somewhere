@@ -18,7 +18,7 @@ function CrossBtn({ onClick }: { onClick: () => void }) {
             rotate: -90,
             paused: true,
             ease: 'elastic.out',
-            duration: 0.7
+            duration: 0.8
         });
 
         function mouseEnter() {
@@ -45,7 +45,7 @@ function CrossBtn({ onClick }: { onClick: () => void }) {
 
     return (
         <button
-            className='flex justify-center items-center bg-transparent border-none text-4xl'
+            className='flex justify-center items-center bg-transparent border-none text-7xl'
             onClick={onClick}
             ref={ref}
         >
