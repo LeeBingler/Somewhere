@@ -47,7 +47,7 @@ function CrossBtn({ onClick }: { onClick: () => void }) {
 
     return (
         <button
-            className='flex justify-center items-center bg-transparent border-none text-7xl pt-10'
+            className='flex justify-center items-center bg-transparent border-none text-7xl mt-10'
             onClick={onClick}
             ref={ref}
         >
