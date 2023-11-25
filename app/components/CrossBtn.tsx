@@ -8,16 +8,29 @@ function CrossBtn({ onClick }: { onClick: () => void }) {
     const ref = useRef<HTMLButtonElement | null>(null);
 
     useLayoutEffect(() => {
-        const hover = gsap.timeline({ paused: true, defaults: { ease: 'none' } });
-        hover.to(ref.current, { rotate: 90, duration: 0.5 });
+        const hover = gsap.to(ref.current, {
+            rotate: 90,
+            paused: true,
+            ease: 'power1.out',
+            duration: 1
+        });
+        const leave = gsap.to(ref.current, {
+            rotate: -90,
+            paused: true,
+            ease: 'elastic.out',
+            duration: 0.7
+        });
 
         function mouseEnter() {
-            hover.timeScale(1);
+            leave.pause();
+            leave.time(0);
             hover.play();
         }
 
         function mouseLeave() {
-            hover.timeScale(-4);
+            hover.pause();
+            hover.time(0);
+            leave.play();
         }
 
         ref.current?.addEventListener('mouseenter', mouseEnter);
