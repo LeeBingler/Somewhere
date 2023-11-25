@@ -82,13 +82,15 @@ function Cursor({ stickyElement }: { stickyElement: MutableRefObject<HTMLDivElem
         });
 
         document.addEventListener('mousemove', handleMouseMove);
-        stickyElement.current?.addEventListener('mouseover', handleMouseOver);
-        stickyElement.current?.addEventListener('mouseleave', handleMouseLeave);
+
+        const HTMLstickyElement = stickyElement.current;
+        HTMLstickyElement?.addEventListener('mouseover', handleMouseOver);
+        HTMLstickyElement?.addEventListener('mouseleave', handleMouseLeave);
 
         return () => {
             document.removeEventListener('mousemove', handleMouseMove);
-            stickyElement.current?.removeEventListener('mouseover', handleMouseOver);
-            stickyElement.current?.removeEventListener('mouseleave', handleMouseLeave);
+            HTMLstickyElement?.removeEventListener('mouseover', handleMouseOver);
+            HTMLstickyElement?.removeEventListener('mouseleave', handleMouseLeave);
         };
     });
 

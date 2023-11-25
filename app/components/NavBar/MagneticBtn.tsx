@@ -19,15 +19,16 @@ function MagneticBtn({ children }: PropsWithChildren) {
         }
 
         function mouseLeave(e: MouseEvent) {
-            gsap.to(ref.current, { x: 0, y: 0, ease: 'elastic.out'});
+            gsap.to(ref.current, { x: 0, y: 0, ease: 'elastic.out' });
         }
+        const HTMLref = ref.current;
 
-        ref.current?.addEventListener('mousemove', handleMouse);
-        ref.current?.addEventListener('mouseleave', mouseLeave);
+        HTMLref?.addEventListener('mousemove', handleMouse);
+        HTMLref?.addEventListener('mouseleave', mouseLeave);
 
         return () => {
-            ref.current?.removeEventListener('mousemove', handleMouse);
-            ref.current?.removeEventListener('mouseleave', mouseLeave);
+            HTMLref?.removeEventListener('mousemove', handleMouse);
+            HTMLref?.removeEventListener('mouseleave', mouseLeave);
         };
     }, []);
 

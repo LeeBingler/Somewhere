@@ -33,12 +33,14 @@ function CrossBtn({ onClick }: { onClick: () => void }) {
             leave.play();
         }
 
-        ref.current?.addEventListener('mouseenter', mouseEnter);
-        ref.current?.addEventListener('mouseleave', mouseLeave);
+        const crossbtn = ref.current;
+
+        crossbtn?.addEventListener('mouseenter', mouseEnter);
+        crossbtn?.addEventListener('mouseleave', mouseLeave);
 
         return () => {
-            ref.current?.removeEventListener('mouseenter', mouseEnter);
-            ref.current?.removeEventListener('mouseleave', mouseLeave);
+            crossbtn?.removeEventListener('mouseenter', mouseEnter);
+            crossbtn?.removeEventListener('mouseleave', mouseLeave);
             hover.kill();
         };
     }, []);
