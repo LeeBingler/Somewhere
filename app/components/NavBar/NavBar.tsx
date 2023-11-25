@@ -6,14 +6,10 @@ import CrossBtn from './CrossBtn';
 import Cursor from './Cursor';
 import { useRef } from 'react';
 import MagneticBtn from './MagneticBtn';
+import NavSection from './NavSection';
 
 function Navbar() {
     const refHamburger = useRef<HTMLDivElement | null>(null);
-
-    function setStateNav(state: string) {
-        let percent = state === 'close' ? 100 : -100;
-        gsap.to('.NavSection', { yPercent: percent, duration: 1.4, ease: 'power1.out' });
-    }
 
     return (
         <>
@@ -21,7 +17,13 @@ function Navbar() {
                 <MagneticBtn>
                     <button
                         className='bg-transparent border-none text-4xl m-4 relative'
-                        onClick={() => setStateNav('close')}
+                        onClick={() => {
+                            gsap.to('.NavSection', {
+                                yPercent: 100,
+                                duration: 1.4,
+                                ease: 'power1'
+                            });
+                        }}
                     >
                         <RxHamburgerMenu />
                         <div
@@ -31,10 +33,8 @@ function Navbar() {
                     </button>
                 </MagneticBtn>
             </header>
+            <NavSection />
             <Cursor stickyElement={refHamburger} />
-            <section className='NavSection fixed left-0 top-0 -translate-y-full h-[100vh] w-[100vw] bg-emerald-500'>
-                <CrossBtn onClick={() => setStateNav('open')} />
-            </section>
         </>
     );
 }

@@ -2,7 +2,7 @@
 
 import gsap from 'gsap';
 import { MutableRefObject, useLayoutEffect, useRef, useState } from 'react';
-import transformFramerMotion from './transformFramerMotion';
+import transformFramerMotion from '../transformFramerMotion';
 
 function Cursor({ stickyElement }: { stickyElement: MutableRefObject<HTMLDivElement | null> }) {
     const refCursor = useRef<HTMLDivElement | null>(null);
