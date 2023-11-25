@@ -1,12 +1,15 @@
 'use client';
 
 import gsap from 'gsap';
-import { MutableRefObject, useLayoutEffect, useRef, useState } from 'react';
+import { MutableRefObject, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import transformFramerMotion from '../../lib/transformFramerMotion';
+import useGetWindowSize from '@/app/lib/useGetSizeWindow';
 
 function Cursor({ stickyElement }: { stickyElement: MutableRefObject<HTMLDivElement | null> }) {
     const refCursor = useRef<HTMLDivElement | null>(null);
     const [isHovered, setIsHovered] = useState(false);
+    const { width } = useGetWindowSize();
+    const isShowed = width > 768;
 
     function handleMouseMove(e: MouseEvent) {
         if (!(refCursor && refCursor.current)) return;
@@ -72,6 +75,7 @@ function Cursor({ stickyElement }: { stickyElement: MutableRefObject<HTMLDivElem
     }
 
     useLayoutEffect(() => {
+        if (!isShowed) return;
         gsap.set(refCursor.current, {
             x: window.innerWidth / 2 - 40,
             y: window.innerHeight / 2 - 40
@@ -89,10 +93,12 @@ function Cursor({ stickyElement }: { stickyElement: MutableRefObject<HTMLDivElem
     });
 
     return (
-        <div
-            ref={refCursor}
-            className='cursor absolute z-10 top-0 left-0 w-5 h-5 bg-transparent rounded-full backdrop-invert pointer-events-none'
-        />
+        isShowed && (
+            <div
+                ref={refCursor}
+                className='cursor absolute z-10 top-0 left-0 w-5 h-5 bg-transparent rounded-full backdrop-invert pointer-events-none'
+            />
+        )
     );
 }
 
