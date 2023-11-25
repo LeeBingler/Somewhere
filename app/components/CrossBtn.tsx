@@ -1,13 +1,13 @@
 'use client';
 
 import { RxCross1 } from 'react-icons/rx';
-import { useLayoutEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 function CrossBtn({ onClick }: { onClick: () => void }) {
     const ref = useRef<HTMLButtonElement | null>(null);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         const hover = gsap.to(ref.current, {
             rotate: 90,
             paused: true,

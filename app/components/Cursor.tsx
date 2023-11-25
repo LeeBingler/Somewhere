@@ -1,7 +1,7 @@
 'use client';
 
 import gsap from 'gsap';
-import { MutableRefObject, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { MutableRefObject, useLayoutEffect, useRef, useState } from 'react';
 import transformFramerMotion from './transformFramerMotion';
 
 function Cursor({ stickyElement }: { stickyElement: MutableRefObject<HTMLDivElement | null> }) {
@@ -71,7 +71,7 @@ function Cursor({ stickyElement }: { stickyElement: MutableRefObject<HTMLDivElem
         setIsHovered(false);
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         gsap.set(refCursor.current, {
             x: window.innerWidth / 2 - 40,
             y: window.innerHeight / 2 - 40
