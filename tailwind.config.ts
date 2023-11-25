@@ -9,7 +9,9 @@ const config: Config = {
   theme: {
     extend: {},
     fontFamily: {
-      'Arapey': ['Arapey', 'sans-serif']
+      'Arapey': ['Arapey', 'sans-serif'],
+      'Poppins': ['Poppins', 'sans-serif'],
+      'Bon-Voyage': ['MADE Bon Voyage', 'sans-serif'],
     }
   },
   plugins: [],
