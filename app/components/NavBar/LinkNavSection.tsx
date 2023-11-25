@@ -15,7 +15,7 @@ export default function LinkNavSection({
             <Link
                 href={`/${children.toLowerCase()}`}
                 onClick={closeNavSection}
-                className={`text-7xl flex flex-col items-center ${
+                className={`text-7xl flex flex-col items-center md:text-[calc(72px+3vw)] ${
                     index % 2 ? 'font-Bon-Voyage capitalize font-medium' : 'font-Poppins uppercase font-bold'
                 }`}
             >
