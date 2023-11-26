@@ -15,11 +15,11 @@ export default function LinkNavSection({
     source: string;
 }) {
     return (
-        <div className='md:mb-24'>
+        <div className='md:mb-24 group relative flex justify-center items-center'>
             <Link
                 href={`/${children.toLowerCase()}`}
                 onClick={closeNavSection}
-                className={`text-7xl flex flex-col items-center md:text-[calc(72px+3vw)] ${
+                className={`relative z-10 text-7xl flex flex-col items-center md:text-[calc(72px+3vw)] ${
                     index % 2
                         ? 'font-Bon-Voyage capitalize font-medium'
                         : 'font-Poppins uppercase font-bold'
@@ -30,7 +30,19 @@ export default function LinkNavSection({
                     {index < 10 ? '0' + index : index}
                 </span>
             </Link>
-            <video src={source} autoPlay loop muted></video>
+            <div
+                className='absolute bottom-0 pointer-events-none h-[0%] w-[45vw] transition-[height] duration-500
+            group-hover:md:block group-hover:md:h-[25vh]
+            after:absolute after:bg-transparent after:w-full after:h-full after:top-0 after:left-0 after:z-20 after:backdrop-invert'
+            >
+                <video
+                    className='h-full w-full object-cover invert'
+                    src={source}
+                    autoPlay
+                    loop
+                    muted
+                ></video>
+            </div>
         </div>
     );
 }
