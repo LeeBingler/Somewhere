@@ -18,7 +18,7 @@ function Navbar() {
                         className='bg-transparent border-none text-4xl m-4 relative'
                         onClick={() => {
                             gsap.to('.NavSection', {
-                                yPercent: 100,
+                                yPercent: 0,
                                 duration: 1.4,
                                 '--opacityNavSectionAfter': 0.7,
                                 ease: 'power1'
