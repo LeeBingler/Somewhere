@@ -2,7 +2,6 @@ import './globals.css';
 import type { Metadata } from 'next';
 
 import Navbar from './components/NavBar/NavBar';
-import Cursor from './components/NavBar/Cursor';
 
 export const metadata: Metadata = {
     title: 'Somewhere',

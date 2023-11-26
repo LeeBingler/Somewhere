@@ -26,11 +26,19 @@ function NavSection() {
         >
             <CrossBtn onClick={closeNavSection} />
             <div className='h-[80vh] flex flex-col justify-around items-center gap-x-48 md:flex-row'>
-                <LinkNavSection closeNavSection={closeNavSection} index={1}>
-                    about
+                <LinkNavSection
+                    source={'/SpiritedAwayNav.mp4'}
+                    closeNavSection={closeNavSection}
+                    index={1}
+                >
+                    About
                 </LinkNavSection>
-                <LinkNavSection closeNavSection={closeNavSection} index={2}>
-                    films
+                <LinkNavSection
+                    source={'/MissPeregrineNav.mp4'}
+                    closeNavSection={closeNavSection}
+                    index={2}
+                >
+                    FILMS
                 </LinkNavSection>
             </div>
         </section>
