@@ -7,4 +7,5 @@
 
 :root {
     overflow-x: hidden;
+    --opacityNavSectionAfter: 0;
 }

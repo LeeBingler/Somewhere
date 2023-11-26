@@ -2,7 +2,6 @@
 
 import { gsap } from 'gsap';
 import { RxHamburgerMenu } from 'react-icons/rx';
-import CrossBtn from './CrossBtn';
 import Cursor from './Cursor';
 import { useRef } from 'react';
 import MagneticBtn from './MagneticBtn';
@@ -21,6 +20,7 @@ function Navbar() {
                             gsap.to('.NavSection', {
                                 yPercent: 100,
                                 duration: 1.4,
+                                '--opacityNavSectionAfter': 0.7,
                                 ease: 'power1'
                             });
                         }}
