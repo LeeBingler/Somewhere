@@ -7,5 +7,7 @@
 
 :root {
     overflow-x: hidden;
+    background-color: rgb(238, 238, 238);
+    --bg-c: rgb(238, 238, 238);
     --opacityNavSectionAfter: 0;
 }
