@@ -11,7 +11,7 @@ export default function LinkNavSection({
     index: number;
 }) {
     return (
-        <div>
+        <div className='md:mb-24'>
             <Link
                 href={`/${children.toLowerCase()}`}
                 onClick={closeNavSection}
