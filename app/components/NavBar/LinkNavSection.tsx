@@ -31,8 +31,8 @@ export default function LinkNavSection({
                 </span>
             </Link>
             <div
-                className='absolute bottom-0 pointer-events-none h-[0%] w-[45vw] transition-[height] duration-500
-            group-hover:md:block group-hover:md:h-[25vh]
+                className='absolute -bottom-20 pointer-events-none h-[0%] w-[45vw] transition-all duration-500
+            group-hover:md:block group-hover:md:h-[150%] group-hover:md:-bottom-5
             after:absolute after:bg-transparent after:w-full after:h-full after:top-0 after:left-0 after:z-20 after:backdrop-invert'
             >
                 <video
