@@ -25,7 +25,7 @@ function NavSection() {
                 after:absolute after:w-full after:h-[200%] after:bottom-0 after:left-0 after:translate-y-full after:bg-black after:opacity-[var(--opacityNavSectionAfter)] after:pointer-events-none'
         >
             <CrossBtn onClick={closeNavSection} />
-            <div className='h-[80vh] flex flex-col justify-around items-center gap-x-[10vw] md:flex-row'>
+            <nav className='h-[80vh] flex flex-col justify-around items-center gap-x-[10vw] md:flex-row'>
                 <LinkNavSection
                     source={'/SpiritedAwayNav.mp4'}
                     closeNavSection={closeNavSection}
@@ -40,7 +40,7 @@ function NavSection() {
                 >
                     FILMS
                 </LinkNavSection>
-            </div>
+            </nav>
         </section>
     );
 }
