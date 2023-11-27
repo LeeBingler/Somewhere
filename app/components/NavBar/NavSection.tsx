@@ -1,9 +1,8 @@
-'use client';
-
-import React, { useLayoutEffect } from 'react';
+import React from 'react';
 import CrossBtn from './CrossBtn';
 import gsap from 'gsap';
 import LinkNavSection from './LinkNavSection';
+import NavMenu from './NavMenu';
 
 function NavSection() {
     function closeNavSection() {
@@ -15,17 +14,13 @@ function NavSection() {
         });
     }
 
-    useLayoutEffect(() => {
-        gsap.set('.NavSection', { yPercent: -100 });
-    }, []);
-
     return (
         <section
             className='NavSection fixed z-50 right-0 top-0 h-[100vh] w-[100vw] bg-[var(--bg-c)] flex flex-col justify-around items-center
                 after:absolute after:w-full after:h-[200%] after:bottom-0 after:left-0 after:translate-y-full after:bg-black after:opacity-[var(--opacityNavSectionAfter)] after:pointer-events-none'
         >
             <CrossBtn onClick={closeNavSection} />
-            <nav className='h-[80vh] flex flex-col justify-around items-center gap-x-[10vw] md:flex-row'>
+            <NavMenu>
                 <LinkNavSection
                     source={'/SpiritedAwayNav.mp4'}
                     closeNavSection={closeNavSection}
@@ -40,7 +35,7 @@ function NavSection() {
                 >
                     FILMS
                 </LinkNavSection>
-            </nav>
+            </NavMenu>
         </section>
     );
 }
