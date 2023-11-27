@@ -21,7 +21,7 @@ function NavSection() {
 
     return (
         <section
-            className='NavSection fixed right-0 top-0 h-[100vh] w-[100vw] bg-[var(--bg-c)] flex flex-col justify-around items-center
+            className='NavSection fixed z-50 right-0 top-0 h-[100vh] w-[100vw] bg-[var(--bg-c)] flex flex-col justify-around items-center
                 after:absolute after:w-full after:h-[200%] after:bottom-0 after:left-0 after:translate-y-full after:bg-black after:opacity-[var(--opacityNavSectionAfter)] after:pointer-events-none'
         >
             <CrossBtn onClick={closeNavSection} />
