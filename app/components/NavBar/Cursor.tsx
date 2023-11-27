@@ -8,7 +8,7 @@ import useGetWindowSize from '@/app/lib/useGetSizeWindow';
 function Cursor({ stickyElement }: { stickyElement: MutableRefObject<HTMLDivElement | null> }) {
     const refCursor = useRef<HTMLDivElement | null>(null);
     const [isHovered, setIsHovered] = useState(false);
-    const { width } = typeof window === 'undefined' ? { width: 1000 } : useGetWindowSize();
+    let { width } = useGetWindowSize();
     const isShowed = width > 768;
 
     function handleMouseMove(e: MouseEvent) {

@@ -9,7 +9,7 @@ function FilmName({ film }: { film: string }) {
                 return (
                     <span
                         key={str}
-                        className={index % 2 ? 'font-Poppins font-bold md:mx-4 mx-2' : ''}
+                        className={index % 2 ? 'font-Poppins font-bold md:mx-4 mx-2' : undefined}
                     >
                         {str}
                     </span>
