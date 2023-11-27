@@ -2,11 +2,12 @@ import CardFilms from './components/CardFilms';
 
 function Films() {
     const nameFilms = [
-        "Miss Peregrine's",
+        'The Fifth Element',
         'Spirited Away',
         "The Pan's Labyrinth",
-        'The 5th Element',
+        "Miss Peregrine's",
     ];
+
     return (
         <main className='flex flex-col select-none'>
             {nameFilms.map((name, index) => {
