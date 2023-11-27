@@ -2,10 +2,10 @@ import CardFilms from './components/CardFilms';
 
 function Films() {
     const nameFilms = [
-        'The Fifth Element',
-        'Spirited Away',
-        "The Pan's Labyrinth",
-        "Miss Peregrine's",
+        'The FIFTH Element',
+        'Spirited AWAY',
+        "The PAN's Labyrinth",
+        "MISS PEREGRINE",
     ];
 
     return (
