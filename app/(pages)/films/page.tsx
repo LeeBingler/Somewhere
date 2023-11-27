@@ -8,7 +8,7 @@ function Films() {
         'The 5th Element',
     ];
     return (
-        <main className='flex flex-col'>
+        <main className='flex flex-col select-none'>
             {nameFilms.map((name, index) => {
                 return <CardFilms key={name} film={name} index={index + 1} />
             })}

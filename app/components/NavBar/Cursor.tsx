@@ -98,7 +98,7 @@ function Cursor({ stickyElement }: { stickyElement: MutableRefObject<HTMLDivElem
         isShowed && (
             <div
                 ref={refCursor}
-                className='cursor fixed z-10 top-0 left-0 w-5 h-5 bg-transparent rounded-full backdrop-invert pointer-events-none'
+                className='cursor fixed z-[51] top-0 left-0 w-5 h-5 bg-transparent rounded-full backdrop-invert pointer-events-none'
             />
         )
     );
