@@ -22,7 +22,7 @@ function NavSection() {
             <CrossBtn onClick={closeNavSection} />
             <NavMenu>
                 <LinkNavSection
-                    source={'/SpiritedAwayNav.mp4'}
+                    source={'/nightmareBeforeChrismasNav.mp4'}
                     closeNavSection={closeNavSection}
                     index={1}
                 >

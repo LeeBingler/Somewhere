@@ -2,9 +2,9 @@ import CardFilms from './components/CardFilms';
 
 function Films() {
     const nameFilms = [
-        'Spirited AWAY',
-        'The FIFTH Element',
-        "Pan's LABARYNTH",
+        "CORPSE BRIDE",
+        '9',
+        'Nightmare BEFORE Christmas',
         "MISS PEREGRINE",
     ];
 

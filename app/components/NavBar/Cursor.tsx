@@ -1,7 +1,7 @@
 'use client';
 
 import gsap from 'gsap';
-import { MutableRefObject, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { MutableRefObject, useLayoutEffect, useRef, useState } from 'react';
 import transformFramerMotion from '../../lib/transformFramerMotion';
 import useGetWindowSize from '@/app/lib/useGetSizeWindow';
 
