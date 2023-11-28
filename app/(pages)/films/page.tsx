@@ -3,8 +3,8 @@ import CardFilms from './components/CardFilms';
 function Films() {
     const nameFilms = [
         "CORPSE BRIDE",
-        '9',
-        'Nightmare BEFORE Christmas',
+        'Alice in WODERLAND',
+        'Nightmare Before CHRISMAS',
         "MISS PEREGRINE",
     ];
 
