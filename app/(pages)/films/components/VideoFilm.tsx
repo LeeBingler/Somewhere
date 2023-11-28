@@ -7,7 +7,7 @@ function VideoFilm({source}: {source: string}) {
         w-full transition-all duration-500
         after:z-50 after:w-full after:h-full after:absolute after:top-0 after:backdrop-invert
         '>
-            <video className='h-full w-full object-cover invert' src={source} autoPlay muted loop></video>
+            <video className='h-full w-full object-cover invert object-[50%30%]' src={source} autoPlay muted loop></video>
         </div>
     );
 }
