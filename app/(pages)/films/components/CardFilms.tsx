@@ -1,5 +1,6 @@
 import React from 'react';
 import FilmName from './FilmName';
+import VideoFilm from './VideoFilm';
 
 function CardFilms({ film, index }: { film: string; index: number }) {
     return (
@@ -12,6 +13,7 @@ function CardFilms({ film, index }: { film: string; index: number }) {
                     <p>more</p>
                 </div>
             </div>
+            <VideoFilm source={'/Navbar/MissPeregrineNav.mp4'} />
         </section>
     );
 }
