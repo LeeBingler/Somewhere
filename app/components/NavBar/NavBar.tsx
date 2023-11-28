@@ -12,7 +12,7 @@ function Navbar() {
 
     return (
         <>
-            <header className='w-full flex justify-end fixed'>
+            <header className='w-full flex justify-end fixed z-20'>
                 <MagneticBtn>
                     <button
                         className='bg-transparent border-none text-4xl m-4 relative'
