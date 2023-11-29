@@ -1,8 +1,18 @@
 import React from 'react';
 import FilmName from './FilmName';
 import VideoFilm from './VideoFilm';
+import ImgFilm from './ImgFilm';
 
-function CardFilms({ film, index, source }: { film: string; index: number; source: string }) {
+function CardFilms({
+    film,
+    img,
+    index,
+}: {
+    film: string;
+    img: string;
+    index: number;
+    source: string;
+}) {
     return (
         <section className='h-[50vh] relative flex justify-center items-center text-[rgb(37,37,37)] pointer-events-none group/cardFilm'>
             <div
@@ -16,8 +26,9 @@ function CardFilms({ film, index, source }: { film: string; index: number; sourc
                     <span className='bg-black w-12 h-[2px] transition-all delay-300 duration-500 group-hover/cardFilm:w-28 md:group-hover/cardFilm:w-48' />
                     <p>more</p>
                 </div>
+                <ImgFilm name={film} />
             </div>
-            <VideoFilm source={source} />
+            <VideoFilm name={film} />
         </section>
     );
 }

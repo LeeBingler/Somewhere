@@ -2,10 +2,10 @@ import CardFilms from './components/CardFilms';
 
 function Films() {
     const filmsArr = [
-        { name: 'Nightmare Before CHRISMAS', source: '/Films/NightmareBeforeChristmas.mp4' },
-        { name: 'CORPSE BRIDE', source: '/Films/CorpseBride.mp4' },
-        { name: 'MISS PEREGRINE', source: '/Films/MissPeregrine.mp4' },
-        { name: 'Alice in WONDERLAND', source: '/Films/AliceInWonderland.mp4' }
+        { name: 'Nightmare Before CHRISTMAS', source: '/Videos/Films/NightmareBeforeChristmas.mp4' },
+        { name: 'CORPSE BRIDE', source: '/Videos/Films/CorpseBride.mp4' },
+        { name: 'MISS PEREGRINE', source: '/Videos/Films/MissPeregrine.mp4' },
+        { name: 'Alice in WONDERLAND', source: '/Videos/Films/AliceInWonderland.mp4' }
     ];
 
     return (
@@ -13,6 +13,7 @@ function Films() {
             {filmsArr.map((objFilm, index) => {
                 return (
                     <CardFilms
+                    img='/Pictures/Home/CorpseBride.png'
                         key={objFilm.source}
                         film={objFilm.name}
                         source={objFilm.source}
