@@ -5,13 +5,10 @@ import ImgFilm from './ImgFilm';
 
 function CardFilms({
     film,
-    img,
     index,
 }: {
     film: string;
-    img: string;
     index: number;
-    source: string;
 }) {
     return (
         <section className='h-[50vh] relative flex justify-center items-center text-[rgb(37,37,37)] pointer-events-none group/cardFilm'>
