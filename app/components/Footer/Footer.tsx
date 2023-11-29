@@ -2,27 +2,33 @@ import React from 'react';
 import { MdEmail } from 'react-icons/md';
 import { FaTwitter } from 'react-icons/fa';
 import ArrowBtn from './ArrowBtn';
+import Link from 'next/link';
 
 function Footer() {
     return (
-        <footer className='w-full flex justify-center'>
+        <footer className='w-full flex justify-center pt-16'>
             <div className='w-10/12 border-t-[1px] border-[rgb(196,196,196)]'>
                 <div className='pt-[3vh] w-full flex justify-between'>
-                    <div className='flex items-center'>
-                        <div className='flex'>
-                            <MdEmail />
-                            <FaTwitter />
-                        </div>
-                        <p className='font-Arapey italic text-[rgb(37,37,37)]'>
+                    <div
+                        className='flex gap-x-1 items-center text-sm
+                    md:text-[min(calc(12px+0.5vw),22px)] md:gap-x-[1vw]'
+                    >
+                        <MdEmail />
+                        <FaTwitter />
+                        <p
+                            className=' font-Arapey-regular font-light italic whitespace-nowrap text-[rgb(37,37,37)]
+                        '
+                        >
                             Somewhere ©2023-2024
                         </p>
                     </div>
-                    <a
-                        className='font-Arapey italic whitespace-nowrap md:text-[calc(12px+1vw)]'
+                    <Link
                         href=''
+                        className='text-sm italic font-Arapey-regular font-light whitespace-nowrap
+                        md:text-[calc(12px+0.5vw)]'
                     >
-                        website by Lee Bingler
-                    </a>
+                        website by L.Bingler
+                    </Link>
                 </div>
                 <div className='pt-[3vh] flex justify-center items-center'>
                     <ArrowBtn />
