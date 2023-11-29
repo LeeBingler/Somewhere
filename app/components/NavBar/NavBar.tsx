@@ -12,10 +12,10 @@ function Navbar() {
 
     return (
         <>
-            <header className='w-full flex justify-end fixed z-20'>
+            <header className='w-full flex justify-end fixed top-0 left-0 z-20'>
                 <MagneticBtn>
                     <button
-                        className='bg-transparent border-none text-4xl m-4 relative'
+                        className='bg-transparent border-none text-4xl mt-8 mr-5 relative'
                         onClick={() => {
                             gsap.to('.NavSection', {
                                 yPercent: 0,
