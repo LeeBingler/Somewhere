@@ -20,7 +20,7 @@ function ArrowBtn() {
                     <path
                         d='M9.00002 9.17745L4.50001 0L0 9.17745L3.54939 7.60869L3.54939 101H5.45062L5.45063 7.60869L9.00002 9.17745Z'
                         fill='currentColor'
-                        shape-rendering='geometricPrecision'
+                        shapeRendering='geometricPrecision'
                     ></path>
                 </svg>
             </button>

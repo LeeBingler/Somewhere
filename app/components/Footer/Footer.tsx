@@ -6,7 +6,7 @@ import EmailBtn from './EmailBtn';
 
 function Footer() {
     return (
-        <footer className='w-full flex justify-center pt-16'>
+        <footer className='w-full flex justify-center pt-28'>
             <div className='w-10/12 border-t-[1px] border-[rgb(196,196,196)]'>
                 <div className='pt-[3vh] w-full flex justify-between'>
                     <div
