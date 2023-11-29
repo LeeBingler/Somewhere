@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 
 import Navbar from './components/NavBar/NavBar';
+import Footer from './components/Footer/Footer';
 
 export const metadata: Metadata = {
     title: 'Somewhere',
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body>
                 <Navbar />
                 {children}
+                <Footer />
             </body>
         </html>
     );
