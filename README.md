@@ -6,7 +6,7 @@ Somewhere is a creative and interactive website to showcase some of the movie by
 
 ## Build
 
-Clone the project
+Clone the project:
 
 ```bash
   git clone git@github.com:LeeBingler/Somewhere.git
@@ -14,13 +14,13 @@ Clone the project
   git clone https://github.com/LeeBingler/Somewhere.git
 ```
 
-Go to the project directory
+Go to the project directory:
 
 ```bash
   cd Somewhere
 ```
 
-Install dependencies
+Install dependencies:
 
 ```bash
   npm install
@@ -44,7 +44,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Running Tests
 
-To run tests, run the following command
+To run tests, run the following command (no test right now they will be added later):
 
 ```bash
   npm run test
