@@ -1,4 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+# Somewhere
+
+Somewhere is a creative and interactive website to showcase some of the movie by Tim Burton inspired by the design of the website [Nowhere](https://www.nowherehq.com) made by [Le Polish Bureau](https://lepolishbureau.com/).
+
+
+## Build
+
+Clone the project
+
+```bash
+  git clone git@github.com:LeeBingler/Somewhere.git
+  # or 
+  git clone https://github.com/LeeBingler/Somewhere.git
+```
+
+Go to the project directory
+
+```bash
+  cd Somewhere
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
 
 ## Getting Started
 
@@ -16,21 +42,24 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Running Tests
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+To run tests, run the following command
 
-## Learn More
+```bash
+  npm run test
+```
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tech Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **TypeScript**: It is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
+- **Next.js**: Used by some of the world's largest companies, Next.js enables you to create full-stack Web applications by extending the latest React features, and integrating powerful Rust-based JavaScript tooling for the fastest builds.
+- **GSAP**: It allow you to effortlessly animate anything JS can touch. Delivering silky-smooth performance and unmatched support so you can focus on the fun stuff.
+- **Tailwind**: A utility-first CSS framework packed with classes  that can be composed to build any design, directly in your markup.
 
-## Deploy on Vercel
+## Copyright and License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The Somewhere project is open-source and distributed under the MIT License, granting users the freedom to use, modify, and distribute the code. For more details, refer to the License File provided in the project.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Feel free to explore the code, contribute, or use Somewhere as a foundation for your creative website projects. Happy coding!
