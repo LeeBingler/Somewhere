@@ -10,7 +10,7 @@ Clone the project:
 
 ```bash
   git clone git@github.com:LeeBingler/Somewhere.git
-  # or 
+  # or
   git clone https://github.com/LeeBingler/Somewhere.git
 ```
 
@@ -44,7 +44,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Running Tests
 
-To run tests, run the following command (no test right now they will be added later):
+To run tests, run the following command:
 
 ```bash
   npm run test
