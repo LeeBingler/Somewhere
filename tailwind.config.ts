@@ -7,7 +7,11 @@ const config: Config = {
         './app/**/*.{js,ts,jsx,tsx,mdx}'
     ],
     theme: {
-        extend: {},
+        extend: {
+            backgroundImage: {
+                'WillyWonka': "url('/Pictures/CharlieNTheChocolateFactory.jpg')"
+            }
+        },
         fontFamily: {
             Arapey: ['Arapey', 'sans-serif'],
             'Arapey-regular': ['Merriweather', 'serif'],
