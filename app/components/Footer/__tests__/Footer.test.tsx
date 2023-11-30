@@ -20,6 +20,14 @@ describe('Footer', () => {
         expect(link).toHaveAttribute('href', 'https://www.lee-bingler.com/');
     });
 
+    it("render link to Lee's Twitter", () => {
+        render(<Footer />);
+
+        const link = screen.getByTestId('linkTwitter')
+
+        expect(link).toHaveAttribute('href', 'https://twitter.com/LeeBingler');
+    });
+
     it('open new window when click on a link', () => {
         render(<Footer />);
 

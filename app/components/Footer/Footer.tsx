@@ -14,7 +14,7 @@ function Footer() {
                     md:text-[min(calc(12px+0.5vw),22px)] md:gap-x-[1vw]'
                     >
                         <EmailBtn />
-                        <Link href={'https://twitter.com/LeeBingler'} target='_blank'>
+                        <Link data-testid='linkTwitter' href={'https://twitter.com/LeeBingler'} target='_blank'>
                             <FaTwitter />
                         </Link>
                         <p
