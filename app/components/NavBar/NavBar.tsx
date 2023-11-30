@@ -6,9 +6,11 @@ import Cursor from './Cursor';
 import { useRef } from 'react';
 import MagneticBtn from './MagneticBtn';
 import NavSection from './NavSection';
+import { usePathname } from 'next/navigation';
 
 function Navbar() {
     const refHamburger = useRef<HTMLDivElement | null>(null);
+    const path = usePathname();
 
     return (
         <>
@@ -25,7 +27,7 @@ function Navbar() {
                             });
                         }}
                     >
-                        <RxHamburgerMenu />
+                        <RxHamburgerMenu className={path === '/about' ? 'text-white' : 'text-black'} />
                         <div
                             ref={refHamburger}
                             className='w-full h-full absolute left-0 top-0 hover:scale-[5]'
