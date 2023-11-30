@@ -6,7 +6,7 @@ function ArrowBtn() {
         <div className='group'>
             <button
                 onClick={() => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
                 }}
                 className='translate-y-5 group-hover:translate-y-10 transition-all'
             >
