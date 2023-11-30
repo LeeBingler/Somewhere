@@ -3,10 +3,17 @@
  */
 
 import ArrowBtn from '../ArrowBtn';
-import { render, screen } from '@testing-library/react';
-import UserEvent from '@testing-library/user-event';
+import { fireEvent, render, screen } from '@testing-library/react';
 
 describe('Arrow Button Footer', () => {
+    const scrollToSpy = jest.fn();
+
+    beforeEach(() => {
+        Object.defineProperty(global.window, 'scrollTo', { value: scrollToSpy });
+        Object.defineProperty(global.window, 'scrollY', { value: 1 });
+        scrollToSpy.mockClear();
+    });
+
     it('should render', () => {
         const arrowBtn = render(<ArrowBtn />);
 
@@ -22,14 +29,11 @@ describe('Arrow Button Footer', () => {
             </>
         );
 
-        window.scrollTo = jest.fn();
-        Object.defineProperty(window, 'scrollTop', { value: 100, writable: true });
-
-        console.log(window.innerHeight);
+        expect(scrollToSpy).not.toHaveBeenCalled();
 
         const btn = screen.getByRole('button');
-        UserEvent.click(btn);
+        fireEvent.click(btn);
 
-        expect(window.scrollTo).toHaveBeenCalledWith(0, 0);
+        expect(scrollToSpy).toHaveBeenCalledWith({ top: 0, left: 0, behavior: 'smooth' });
     });
 });
