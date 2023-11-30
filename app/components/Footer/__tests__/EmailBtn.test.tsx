@@ -2,6 +2,7 @@
  * @jest-environment jsdom
  */
 
+import sleep from '@/app/lib/sleep';
 import EmailBtn from '../EmailBtn';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -23,5 +24,17 @@ describe('Email Button', () => {
         const clipboardText = await navigator.clipboard.readText();
 
         expect(clipboardText).toBe('binglerlee@gmail.com');
+    });
+
+    it('should display a popup 2sec that the email is copied', async () => {
+        const user = userEvent.setup();
+        render(<EmailBtn />);
+        const btn = screen.getByRole('button');
+        const popup = screen.getByText('Email copied to the clipboard')
+        await user.click(btn);
+
+        expect(popup).toBeVisible();
+        await sleep(3000);
+        expect(popup).not.toBeVisible();
     });
 });
