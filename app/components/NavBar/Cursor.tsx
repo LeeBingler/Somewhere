@@ -3,7 +3,7 @@
 import gsap from 'gsap';
 import { MutableRefObject, useLayoutEffect, useRef, useState } from 'react';
 import transformFramerMotion from '../../lib/transformFramerMotion';
-import useGetWindowSize from '@/app/lib/useGetSizeWindow';
+import useGetWindowSize from '@/app/hooks/useGetSizeWindow';
 
 function Cursor({ stickyElement }: { stickyElement: MutableRefObject<HTMLDivElement | null> }) {
     const refCursor = useRef<HTMLDivElement | null>(null);
