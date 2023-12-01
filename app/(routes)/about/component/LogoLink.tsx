@@ -9,7 +9,7 @@ function LogoLink() {
                     <path
                         d='M2 2h71.7L2 73.8V2zm47.9 55.7L2 9.9v71.8h58.3M97.7 9.9L26 81.6h71.8V9.9zm-47.8 16l47.9 47.9V2H30.4'
                         stroke='#ffffff'
-                        stroke-width='4'
+                        strokeWidth='4'
                     ></path>
                 </svg>
             </svg>
