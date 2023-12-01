@@ -1,29 +1,31 @@
 'use client';
 
 import gsap from 'gsap';
-import { MutableRefObject, useLayoutEffect, useRef, useState } from 'react';
-import transformFramerMotion from '../../lib/transformFramerMotion';
+import { useLayoutEffect, useRef } from 'react';
+import transformFramerMotion from '../lib/transformFramerMotion';
 import useGetWindowSize from '@/app/hooks/useGetSizeWindow';
 
-function Cursor({ stickyElement }: { stickyElement: MutableRefObject<HTMLDivElement | null> }) {
+function Cursor() {
     const refCursor = useRef<HTMLDivElement | null>(null);
-    const [isHovered, setIsHovered] = useState(false);
     let { width } = useGetWindowSize();
     const isShowed = width > 768;
 
     function handleMouseMove(e: MouseEvent) {
         if (!(refCursor && refCursor.current)) return;
+        const btn = e.target as HTMLDivElement;
 
         const { clientX, clientY } = e;
 
-        const widthCursor = isHovered ? 55 : 20;
-        const heightCursor = isHovered ? 55 : 20;
+        let widthCursor = 20;
+        let heightCursor = 20;
 
         const mouseX = clientX - widthCursor / 2;
         const mouseY = clientY - heightCursor / 2;
 
-        if (isHovered && stickyElement && stickyElement.current) {
-            const { width, height, left, top } = stickyElement.current?.getBoundingClientRect();
+        if (btn.classList.contains('magnetic')) {
+            widthCursor = 55;
+            heightCursor = 55;
+            const { width, height, left, top } = btn.getBoundingClientRect();
             const center = {
                 x: left + width / 2,
                 y: top + height / 2
@@ -55,6 +57,7 @@ function Cursor({ stickyElement }: { stickyElement: MutableRefObject<HTMLDivElem
             });
             return;
         }
+
         gsap.to(refCursor.current, {
             x: mouseX,
             y: mouseY,
@@ -66,14 +69,6 @@ function Cursor({ stickyElement }: { stickyElement: MutableRefObject<HTMLDivElem
         });
     }
 
-    function handleMouseOver() {
-        setIsHovered(true);
-    }
-
-    function handleMouseLeave() {
-        setIsHovered(false);
-    }
-
     useLayoutEffect(() => {
         if (!isShowed) return;
         gsap.set(refCursor.current, {
@@ -83,14 +78,8 @@ function Cursor({ stickyElement }: { stickyElement: MutableRefObject<HTMLDivElem
 
         document.addEventListener('mousemove', handleMouseMove);
 
-        const HTMLstickyElement = stickyElement.current;
-        HTMLstickyElement?.addEventListener('mouseover', handleMouseOver);
-        HTMLstickyElement?.addEventListener('mouseleave', handleMouseLeave);
-
         return () => {
             document.removeEventListener('mousemove', handleMouseMove);
-            HTMLstickyElement?.removeEventListener('mouseover', handleMouseOver);
-            HTMLstickyElement?.removeEventListener('mouseleave', handleMouseLeave);
         };
     });
 
