@@ -3,7 +3,7 @@ import React from 'react';
 function ArticleAbout() {
     return (
         <article
-            className='w-[70%] h-[80vh] mr-6 overflow-y-scroll text-white whitespace-pre-line
+            className='w-[80%] md:w-[60%] h-[80vh] mr-6 overflow-y-scroll text-white whitespace-pre-line
                         backdrop-blur-sm
                                     font-Bon-Voyage font-medium text-[6.7vw] leading-[8vw] md:text-5xl
                                     selection:bg-none selection:text-[rgb(205,0,0)]'
