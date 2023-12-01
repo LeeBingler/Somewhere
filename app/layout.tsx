@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 
 import Navbar from './components/NavBar/NavBar';
+import Cursor from './components/Cursor';
 import Footer from './components/Footer/Footer';
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang='en'>
             <body>
                 <Navbar />
+                <Cursor />
                 {children}
                 <Footer />
             </body>
