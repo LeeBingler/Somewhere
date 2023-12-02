@@ -13,7 +13,7 @@ function ArticleAbout() {
                     <b className='font-Poppins font-extrabold'>SOMEWHERE </b> is
                 </p>
                 <p>an webapp that showcase some</p>
-                <p>of Tim Burton's movies,</p>
+                <p>of Tim Burton&apos;s movies,</p>
                 <p>coded by</p>
                 <p>Lee Bingler</p>
                 <p>which focuses on</p>
