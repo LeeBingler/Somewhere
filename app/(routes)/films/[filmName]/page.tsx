@@ -49,7 +49,7 @@ function FilmDescription({ params }: { params: { filmName: string } }) {
                 <LogoLink />
             </aside>
             <section className='relative'>
-                <div className='w-full absolute top-0 left-0'>
+                <div className='w-[120%] absolute top-0 left-0'>
                     <video
                         src={heroVisualData[1]}
                         className='hidden md:block h-[100vh] w-[100vw] object-cover object-[50%30%]'
@@ -58,14 +58,18 @@ function FilmDescription({ params }: { params: { filmName: string } }) {
                         loop
                     />
                     <img
-                        className='md:hidden object-cover h-[100vh]'
+                        className='md:hidden object-cover h-[100vh] -translate-x-[76px]'
                         src={heroVisualData[0]}
                         alt={`image of ${params.filmName}`}
                     />
                 </div>
                 <article className='relative w-[100vw] h-[100vh]'>
-                    <div className='h-full flex flex-col justify-end'>
-                        <FilmName className='text-white mb-36 ml-8 md:ml-32 text-5xl md:text-[calc(2vw+3rem)]' film={nameFilm} />
+                    <div className='h-full flex flex-col justify-end text-white ml-8 md:ml-32'>
+                        <FilmName className=' text-5xl md:text-[calc(2vw+3rem)]' film={nameFilm} />
+                        <div className='mb-36 mt-4 md:text-[calc(1rem+0.1vw)]'>
+                            <p className='font-Poppins font-bold'>{releaseDate}</p>
+                            <p className='font-Bon-Voyage italic'>Release Date</p>
+                        </div>
                     </div>
                 </article>
             </section>
