@@ -58,7 +58,7 @@ function CardFilm({
                 duration: 1
             });
         }
-        await sleep(1200);
+        await sleep(1700);
         router.replace('/films/' + idSection);
     }
 

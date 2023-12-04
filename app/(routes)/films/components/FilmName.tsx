@@ -1,7 +1,8 @@
 import React from 'react';
 
-function FilmName({ film }: { film: string }) {
-    const filmSplit = film.split(' ');
+function FilmName({ film, className }: { film: string | undefined; className ?: string }) {
+    if (typeof film === 'undefined') return;
+    const filmSplit = film?.split(' ');
 
     if (filmSplit.length > 2) {
         filmSplit[0] = filmSplit[0] + ' ' + filmSplit[1];
@@ -10,9 +11,7 @@ function FilmName({ film }: { film: string }) {
     }
 
     return (
-        <h1
-            className='text-4xl md:text-[min(5vw,100px)] md:h-[10vw] flex flex-col justify-around font-Bon-Voyage'
-        >
+        <h1 className={`text-4xl md:text-[min(5vw,100px)] md:h-[10vw] flex flex-col justify-around font-Bon-Voyage ` + className}>
             {filmSplit.map((str, index) => {
                 return (
                     <span key={str} className={index % 2 ? 'font-Poppins font-bold' : undefined}>
