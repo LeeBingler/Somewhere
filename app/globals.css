@@ -12,4 +12,6 @@
     background-color: rgb(238, 238, 238);
     --bg-c: rgb(238, 238, 238);
     --opacityNavSectionAfter: 0;
+
+    scroll-behavior: smooth;
 }

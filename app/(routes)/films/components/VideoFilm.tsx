@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { ForwardedRef, forwardRef } from 'react';
 import strToCamelCase from '@/app/lib/strToCamelCase';
 
-function VideoFilm({ name }: { name: string }) {
+const VideoFilm = forwardRef(({ name }: { name: string }, ref: ForwardedRef<HTMLDivElement>) => {
     const dirVideo = '/Videos/Films/';
     const nameCamelCase = strToCamelCase(name.toLocaleLowerCase());
     const fileExtension = '.mp4';
 
     return (
         <div
+            ref={ref}
             className='hidden md:block absolute bottom-1/2 h-[0%]
         group-hover/cardFilm:bottom-[0%] group-hover/cardFilm:h-full
         w-full transition-all duration-500
@@ -23,6 +24,6 @@ function VideoFilm({ name }: { name: string }) {
             ></video>
         </div>
     );
-}
+});
 
 export default VideoFilm;
