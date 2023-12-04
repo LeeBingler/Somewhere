@@ -7,6 +7,8 @@ import ImgFilm from './ImgFilm';
 import Link from 'next/link';
 import useGetWindowSize from '@/app/hooks/useGetSizeWindow';
 import gsap from 'gsap';
+import sleep from '@/app/lib/sleep';
+import { useRouter } from 'next/navigation';
 
 function CardFilm({
     film,
@@ -22,12 +24,14 @@ function CardFilm({
     const videoRef = useRef<HTMLDivElement>(null);
     const imgRef = useRef<HTMLImageElement>(null);
     const cardRef = useRef<HTMLAnchorElement>(null);
+    const router = useRouter();
     const { width } = useGetWindowSize();
 
-    function onClick() {
+    async function onClick() {
         const tl = gsap.timeline();
 
         tl.to(document.documentElement, { overflowY: 'hidden', duration: 0 });
+        tl.to(cardRef.current, { pointerEvents: 'none', duration: 0 });
         if (width > 768) {
             tl.to(videoRef.current, {
                 width: '100vw',
@@ -54,6 +58,8 @@ function CardFilm({
                 duration: 1
             });
         }
+        await sleep(1200);
+        router.replace('/films/' + idSection);
     }
 
     return (
