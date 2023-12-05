@@ -32,7 +32,7 @@ function MagneticBtn({ children }: PropsWithChildren) {
         };
     }, []);
 
-    return React.cloneElement(children as React.ReactElement, { ref });
+    return React.cloneElement(children as React.ReactElement, { ref })
 }
 
 export default MagneticBtn;

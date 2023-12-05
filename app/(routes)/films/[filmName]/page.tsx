@@ -5,6 +5,8 @@ import BgHero from './components/BgHero';
 import ReleaseDate from './components/ReleaseDate';
 import ResetOverFlow from './components/ResetOverFlow';
 import FilmNameRenderClient from './components/FilmNameRenderClient';
+import AnimatedLogo from './components/FadeInAnimation';
+import FadeInAnimation from './components/FadeInAnimation';
 
 function FilmDescription({ params }: { params: { filmName: string } }) {
     function getReleaseDate(filmLink: string) {
@@ -33,17 +35,21 @@ function FilmDescription({ params }: { params: { filmName: string } }) {
     return (
         <main>
             <ResetOverFlow />
-            <aside className='fixed w-fit mx-10 mt-10 pb-10 z-30'>
-                <LogoLink />
-            </aside>
+            <FadeInAnimation>
+                <aside className='fixed opacity-0 w-fit mx-10 mt-10 pb-10 z-30'>
+                    <LogoLink />
+                </aside>
+            </FadeInAnimation>
             <section className='relative'>
                 <BgHero filmName={params.filmName} />
-                <article className='relative w-[100vw] h-[100vh]'>
-                    <div className='h-full flex flex-col justify-end text-white ml-8 md:ml-32'>
-                        <FilmNameRenderClient filmNameUrl={params.filmName} />
-                        <ReleaseDate releaseDate={releaseDate} />
-                    </div>
-                </article>
+                <FadeInAnimation>
+                    <article className='relative w-[100vw] h-[100vh]'>
+                        <div className='h-full flex flex-col justify-end text-white ml-8 md:ml-32'>
+                            <FilmNameRenderClient filmNameUrl={params.filmName} />
+                            <ReleaseDate releaseDate={releaseDate} />
+                        </div>
+                    </article>
+                </FadeInAnimation>
             </section>
         </main>
     );
