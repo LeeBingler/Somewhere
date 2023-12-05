@@ -8,7 +8,7 @@ export async function GET() {
         releaseDate: 'March 24, 2010',
         distributor: '',
         worldPremiere: '',
-        descriptionText: '',
+        descriptionText: ['', ''],
         quotes: [
             { quote: '', author: '' },
             { quote: '', author: '' }

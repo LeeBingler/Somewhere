@@ -1,13 +1,14 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { InterfaceDataMyAPI } from '@/app/types';
+import { NextResponse } from 'next/server';
 
 export async function GET() {
-    const data = {
+    const data: InterfaceDataMyAPI = {
         name: 'Nightmare before christmas',
         displayedName: 'Nightmare Before CHRISTMAS',
         releaseDate: 'October 29, 1993',
         distributor: '',
         worldPremiere: '',
-        descriptionText: '',
+        descriptionText: ['', ''],
         quotes: [
             { quote: '', author: '' },
             { quote: '', author: '' }

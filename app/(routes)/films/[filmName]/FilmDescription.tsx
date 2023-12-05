@@ -33,9 +33,19 @@ function FilmDescription({ data }: { data: InterfaceDataMyAPI }) {
                 </FadeInAnimation>
             </section>
             <section>
-            <AboutText />
-                <MetaDataFilm info={data.distributor} title='Distributor' />
-                <MetaDataFilm info={data.worldPremiere} title='World Premiere' />
+                <article>
+                    <div className='flex flex-col-reverse md:flex-col'>
+                        <AboutText />
+                        <div>
+                            <MetaDataFilm info={data.distributor} title='Distributor' />
+                            <MetaDataFilm info={data.worldPremiere} title='World Premiere' />
+                        </div>
+                    </div>
+                    <div>
+                        <p className='font-Poppins'>{data.descriptionText[0]}</p>
+                        <p className='font-Arapey'>{data.descriptionText[1]}</p>
+                    </div>
+                </article>
             </section>
         </main>
     );

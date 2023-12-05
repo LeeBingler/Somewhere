@@ -1,13 +1,14 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { InterfaceDataMyAPI } from '@/app/types';
+import { NextResponse } from 'next/server';
 
 export async function GET() {
-    const data = {
+    const data: InterfaceDataMyAPI = {
         name: 'Corpse Bride',
         displayedName: 'CORPSE BRIDE',
         releaseDate: 'September 23, 2005',
         distributor: '',
         worldPremiere: '',
-        descriptionText: '',
+        descriptionText: ['', ''],
         quotes: [
             { quote: '', author: '' },
             { quote: '', author: '' }

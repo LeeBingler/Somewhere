@@ -4,7 +4,7 @@ export interface InterfaceDataMyAPI {
     releaseDate: string;
     distributor: string;
     worldPremiere: string;
-    descriptionText: string;
+    descriptionText: [string, string];
     quotes: Array<{ quote: string; author: string }>;
     awards: Array<string>;
     press: Array<{ quote: string; webpage: string }>;
