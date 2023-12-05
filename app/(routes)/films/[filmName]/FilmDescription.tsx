@@ -20,7 +20,7 @@ function FilmDescription({ data }: { data: InterfaceDataMyAPI }) {
             <section className='relative'>
                 <BgHero filmName={data.displayedName} />
                 <FadeInAnimation>
-                    <article className='relative w-[100vw] h-[100vh]'>
+                    <article className='relative opacity-0 w-[100vw] h-[100vh]'>
                         <div className='h-full flex flex-col justify-end text-white ml-8 md:ml-32'>
                             <FilmName film={data.displayedName} />
                             <MetaDataFilm

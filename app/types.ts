@@ -7,5 +7,5 @@ export interface InterfaceDataMyAPI {
     descriptionText: [string, string];
     quotes: Array<{ quote: string; author: string }>;
     awards: Array<string>;
-    press: Array<{ quote: string; webpage: string }>;
+    press: Array<{ name: string; quote: string; webpage: string }>;
 }
