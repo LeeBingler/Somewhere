@@ -6,6 +6,7 @@ import React, { useEffect } from 'react';
 import LogoLink from '../../about/component/LogoLink';
 import gsap from 'gsap';
 import FilmName from '../components/FilmName';
+import BgHero from './components/BgHero';
 
 function getReleaseDate(filmLink: string) {
     if (filmLink === 'corpse-bride') return 'September 23, 2005';
@@ -35,11 +36,6 @@ function FilmDescription({ params }: { params: { filmName: string } }) {
     checkGoodLink(params.filmName);
     resetOverFlow();
 
-    const nameCamelCase = strToCamelCase(params.filmName.replaceAll('-', ' '));
-    const heroVisualData = [
-        '/Pictures/Home/' + nameCamelCase + '.png',
-        '/Videos/Films/' + nameCamelCase + '.mp4'
-    ];
     const nameFilm = useGetOneFilmFromUrl(params.filmName);
     const releaseDate = getReleaseDate(params.filmName);
 
@@ -49,20 +45,7 @@ function FilmDescription({ params }: { params: { filmName: string } }) {
                 <LogoLink />
             </aside>
             <section className='relative'>
-                <div className='w-[120%] absolute top-0 left-0'>
-                    <video
-                        src={heroVisualData[1]}
-                        className='hidden md:block h-[100vh] w-[100vw] object-cover object-[50%30%]'
-                        autoPlay
-                        muted
-                        loop
-                    />
-                    <img
-                        className='md:hidden object-cover h-[100vh] -translate-x-[76px]'
-                        src={heroVisualData[0]}
-                        alt={`image of ${params.filmName}`}
-                    />
-                </div>
+                <BgHero filmName={params.filmName} />
                 <article className='relative w-[100vw] h-[100vh]'>
                     <div className='h-full flex flex-col justify-end text-white ml-8 md:ml-32'>
                         <FilmName className=' text-5xl md:text-[calc(2vw+3rem)]' film={nameFilm} />
