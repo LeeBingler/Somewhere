@@ -2,7 +2,6 @@
 
 import { gsap } from 'gsap';
 import { RxHamburgerMenu } from 'react-icons/rx';
-import Cursor from '../Cursor';
 import { useRef } from 'react';
 import MagneticBtn from './MagneticBtn';
 import NavSection from './NavSection';
