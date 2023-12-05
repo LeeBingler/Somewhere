@@ -5,7 +5,6 @@ import BgHero from './components/BgHero';
 import ReleaseDate from './components/ReleaseDate';
 import ResetOverFlow from './components/ResetOverFlow';
 import FilmNameRenderClient from './components/FilmNameRenderClient';
-import AnimatedLogo from './components/FadeInAnimation';
 import FadeInAnimation from './components/FadeInAnimation';
 
 function FilmDescription({ params }: { params: { filmName: string } }) {

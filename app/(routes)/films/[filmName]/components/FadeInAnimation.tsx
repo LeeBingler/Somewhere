@@ -13,7 +13,7 @@ function FadeInAnimation({
     useEffect(() => {
         gsap.set(ref.current, { opacity: 0, duration: 0 });
         gsap.to(ref.current, { opacity: 1, duration: duration });
-    }, []);
+    }, [duration]);
 
     return React.cloneElement(children as React.ReactElement, { ref });
 }
