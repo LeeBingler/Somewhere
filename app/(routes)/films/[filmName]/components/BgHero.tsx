@@ -2,7 +2,7 @@ import strToCamelCase from '@/app/lib/strToCamelCase';
 import React from 'react';
 
 function BgHero({ filmName }: { filmName: string }) {
-    const nameCamelCase = strToCamelCase(filmName.replaceAll('-', ' '));
+    const nameCamelCase = strToCamelCase(filmName.replaceAll('-', ' ').toLowerCase());
     const video = '/Videos/Films/' + nameCamelCase + '.mp4';
     const img = '/Pictures/Home/' + nameCamelCase + '.png'
 
