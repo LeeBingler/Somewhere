@@ -1,7 +1,7 @@
 import React, { ForwardedRef, forwardRef } from 'react';
 import strToCamelCase from '@/app/lib/strToCamelCase';
 
-const VideoFilm = forwardRef(({ name }: { name: string }, ref: ForwardedRef<HTMLDivElement>) => {
+function VideoFilm({ name }: { name: string }, ref: ForwardedRef<HTMLDivElement>) {
     const dirVideo = '/Videos/Films/';
     const nameCamelCase = strToCamelCase(name.toLocaleLowerCase());
     const fileExtension = '.mp4';
@@ -24,6 +24,6 @@ const VideoFilm = forwardRef(({ name }: { name: string }, ref: ForwardedRef<HTML
             ></video>
         </div>
     );
-});
+}
 
-export default VideoFilm;
+export default forwardRef(VideoFilm);
