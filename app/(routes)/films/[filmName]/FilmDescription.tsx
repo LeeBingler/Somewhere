@@ -6,6 +6,7 @@ import FadeInAnimation from './components/FadeInAnimation';
 import { InterfaceDataMyAPI } from '@/app/types';
 import MetaDataFilm from './components/MetaDataFilm';
 import FilmName from '../components/FilmName';
+import AboutText from '@/app/components/AboutText';
 
 function FilmDescription({ data }: { data: InterfaceDataMyAPI }) {
     return (
@@ -32,6 +33,7 @@ function FilmDescription({ data }: { data: InterfaceDataMyAPI }) {
                 </FadeInAnimation>
             </section>
             <section>
+            <AboutText />
                 <MetaDataFilm info={data.distributor} title='Distributor' />
                 <MetaDataFilm info={data.worldPremiere} title='World Premiere' />
             </section>
