@@ -17,7 +17,10 @@ export async function GET() {
                 quote: 'the story wraps on a perfectly muted note that rings a melancholy echo of the ending of “Nightmare.”',
                 author: 'Variety'
             },
-            { quote: '', author: '' }
+            {
+                quote: ' In many ways, "Corpse Bride" plays out like poetry',
+                author: 'The Independent Critic'
+            }
         ],
         awards: [
             'Future Film Festival Digital Award',
