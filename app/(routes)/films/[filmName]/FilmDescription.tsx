@@ -7,6 +7,7 @@ import { InterfaceDataMyAPI } from '@/app/types';
 import MetaDataFilm from './components/MetaDataFilm';
 import FilmName from '../components/FilmName';
 import AboutText from '@/app/components/AboutText';
+import QuoteContainer from './components/QuoteContainer';
 
 function FilmDescription({ data }: { data: InterfaceDataMyAPI }) {
     return (
@@ -56,6 +57,13 @@ function FilmDescription({ data }: { data: InterfaceDataMyAPI }) {
                         <p className='font-Arapey text-[5.6vw] leading-[8.27vw] whitespace-pre-line'>
                             {data.descriptionText[1]}
                         </p>
+                    </div>
+                </article>
+                <article>
+                    <div className='my-[8vh] ml-[21.56%]'>
+                        {data.quotes.map((quote) => {
+                            return <QuoteContainer quote={quote} />;
+                        })}
                     </div>
                 </article>
             </section>
