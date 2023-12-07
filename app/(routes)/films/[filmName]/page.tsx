@@ -18,7 +18,8 @@ async function page({ params }: { params: { filmName: string } }) {
 
     const baseURL = process.env.STATUS === 'dev' ? 'http://localhost:3000' : process.env.URL;
     const data = await fetch(baseURL + '/api/films/' + params.filmName, {
-        method: 'GET'
+        method: 'GET',
+        next: { revalidate: 3600 }
     }).then((res) => res.json());
 
     return <FilmDescription data={data} />;
