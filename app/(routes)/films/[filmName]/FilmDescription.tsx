@@ -62,7 +62,7 @@ function FilmDescription({ data }: { data: InterfaceDataMyAPI }) {
                 <article>
                     <div className='my-[8vh] ml-[21.56%]'>
                         {data.quotes.map((quote) => {
-                            return <QuoteContainer quote={quote} />;
+                            return <QuoteContainer key={quote.quote} quote={quote} />;
                         })}
                     </div>
                 </article>
