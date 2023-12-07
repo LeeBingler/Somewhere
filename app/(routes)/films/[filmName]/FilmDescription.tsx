@@ -8,6 +8,9 @@ import MetaDataFilm from './components/MetaDataFilm';
 import FilmName from '../components/FilmName';
 import AboutText from '@/app/components/AboutText';
 import QuoteContainer from './components/QuoteContainer';
+import ImgDescription from './components/ImgDescription';
+import AwardContainer from './components/AwardContainer';
+import PressContainer from './components/PressContainer';
 
 function FilmDescription({ data }: { data: InterfaceDataMyAPI }) {
     return (
@@ -60,10 +63,39 @@ function FilmDescription({ data }: { data: InterfaceDataMyAPI }) {
                     </div>
                 </article>
                 <article>
+                    <ImgDescription
+                        className='w-4/5 ml-7 max-w-md'
+                        filmName={data.name}
+                        number={1}
+                    />
                     <div className='my-[8vh] ml-[21.56%]'>
                         {data.quotes.map((quote) => {
                             return <QuoteContainer key={quote.quote} quote={quote} />;
                         })}
+                    </div>
+                    <ImgDescription className='mb-[10vh]' filmName={data.name} number={2} />
+                    <ImgDescription filmName={data.name} number={3} />
+                </article>
+                <article className='mx-10'>
+                    <div>
+                        <h1 className='mb-10 ml-10 font-Poppins font-extrabold text-[15vw] text-[rgb(37,37,37)] lg:text-[100px]'>
+                            AWARDS
+                        </h1>
+                        <div className='md:flex justify-center gap-x-[10vw]'>
+                            {data.awards.map((award) => {
+                                return <AwardContainer key={award} award={award} />;
+                            })}
+                        </div>
+                    </div>
+                    <div>
+                        <h1 className='mb-10 ml-10 mt-[15vh] font-Poppins font-extrabold text-[15vw] text-[rgb(37,37,37)] lg:text-[100px]'>
+                            PRESS
+                        </h1>
+                        <div className='text-[calc(24px+0.4vw)] mx-5 w-full md:flex md:leading-[calc(24px+0.6vw)]'>
+                            {data.press.map((press) => {
+                                return <PressContainer press={press} key={press.webpage} />;
+                            })}
+                        </div>
                     </div>
                 </article>
             </section>

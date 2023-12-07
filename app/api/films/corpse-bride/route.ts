@@ -35,7 +35,7 @@ export async function GET() {
             },
             {
                 name: 'The Guardian',
-                quote: 'He&apos;s done it with great panache',
+                quote: "He's done it with great panache",
                 webpage: 'https://www.theguardian.com/culture/2005/oct/21/3'
             },
             {

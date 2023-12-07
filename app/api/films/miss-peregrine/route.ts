@@ -14,11 +14,11 @@ export async function GET() {
         ],
         quotes: [
             {
-                quote: 'It may be senseless, but it&apos;s sumptuous: the picture looks like it cost about a billion bucks',
+                quote: "It may be senseless, but it's sumptuous: the picture looks like it cost about a billion bucks",
                 author: 'New York Post'
             },
             {
-                quote: 'The title may read “Miss Peregrine&apos;s Home for Peculiar Children,” but there can be no doubt for anyone buying a ticket',
+                quote: "The title may read “Miss Peregrine's Home for Peculiar Children,” but there can be no doubt for anyone buying a ticket",
                 author: 'Variety'
             }
         ],
@@ -26,7 +26,7 @@ export async function GET() {
         press: [
             {
                 name: 'IGN',
-                quote: ' Miss Peregrine&apos;s technical aspects manage to intrigue you enough to make it worthwhile.',
+                quote: " Miss Peregrine's technical aspects manage to intrigue you enough to make it worthwhile.",
                 webpage:
                     'https://www.ign.com/articles/2016/09/27/miss-peregrines-home-for-peculiar-children-review'
             },
@@ -38,7 +38,7 @@ export async function GET() {
             },
             {
                 name: 'New York Post',
-                quote: '“Miss Peregrine&apos;s Home for Peculiar Children” certainly brings back that youthful feeling.',
+                quote: "“Miss Peregrine's Home for Peculiar Children” certainly brings back that youthful feeling.",
                 webpage:
                     'https://nypost.com/2016/09/29/dont-visit-miss-peregrines-home-for-peculiar-children/'
             }
