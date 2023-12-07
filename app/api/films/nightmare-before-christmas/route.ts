@@ -7,7 +7,7 @@ export async function GET() {
         displayedName: 'Nightmare Before CHRISTMAS',
         releaseDate: 'October 29, 1993',
         distributor: 'Buena Vista Picture Distribution',
-        worldPremiere: 'the New York Film Festival',
+        worldPremiere: 'The New York Film Festival',
         descriptionText: [
             'It tells the story of Jack Skellington, the King of "Halloween Town", ',
             'who stumbles upon "Christmas Town" and schemes to take over the holiday.'

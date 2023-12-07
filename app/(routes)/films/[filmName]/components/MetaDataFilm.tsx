@@ -17,9 +17,9 @@ function MetaDataFilm({
     }
 
     return (
-        <div className={'text-base md:text-[calc(1rem+0.1vw)] ' + className}>
-            <p className='font-Poppins font-bold'>{displayedInfo}</p>
-            <p className='font-Bon-Voyage italic'>{title}</p>
+        <div className={'text-base md:text-[calc(1rem+0.1vw)] max-w-[30vw] ' + className}>
+            <p className='font-Poppins font-extrabold'>{displayedInfo}</p>
+            <p className='font-Arapey italic'>{title}</p>
         </div>
     );
 }

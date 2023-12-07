@@ -35,15 +35,27 @@ function FilmDescription({ data }: { data: InterfaceDataMyAPI }) {
             <section>
                 <article>
                     <div className='flex flex-col-reverse md:flex-col'>
-                        <AboutText />
-                        <div>
-                            <MetaDataFilm info={data.distributor} title='Distributor' />
-                            <MetaDataFilm info={data.worldPremiere} title='World Premiere' />
+                        <AboutText className='text-[25vw] mt-[7vh] ml-[8%]' />
+                        <div className='flex flex-col items-center gap-y-[5vh] w-full mt-[10vh]'>
+                            <MetaDataFilm
+                                className='child:text-[4.5vw] child:text-[rgb(37,37,37)]'
+                                info={data.distributor}
+                                title='Distributor'
+                            />
+                            <MetaDataFilm
+                                className='child:text-[4.5vw]'
+                                info={data.worldPremiere}
+                                title='World Premiere'
+                            />
                         </div>
                     </div>
-                    <div>
-                        <p className='font-Poppins'>{data.descriptionText[0]}</p>
-                        <p className='font-Arapey'>{data.descriptionText[1]}</p>
+                    <div className='mt-[4vh] mb-[8vh] ml-[21.56%] mr-2'>
+                        <p className='font-Poppins text-[5.6vw] leading-[8.27vw] font-extrabold whitespace-pre-line'>
+                            {data.descriptionText[0]}
+                        </p>
+                        <p className='font-Arapey text-[5.6vw] leading-[8.27vw] whitespace-pre-line'>
+                            {data.descriptionText[1]}
+                        </p>
                     </div>
                 </article>
             </section>

@@ -9,7 +9,7 @@ const config: Config = {
     theme: {
         extend: {
             backgroundImage: {
-                'WillyWonka': "url('/Pictures/CharlieNTheChocolateFactory.jpg')"
+                WillyWonka: "url('/Pictures/CharlieNTheChocolateFactory.jpg')"
             }
         },
         fontFamily: {
@@ -19,6 +19,13 @@ const config: Config = {
             'Bon-Voyage': ['MADE Bon Voyage', 'sans-serif']
         }
     },
-    plugins: []
+    plugins: [
+        function ({ addVariant }: { addVariant: any }) {
+            addVariant('child', '& > *');
+            addVariant('child-hover', '& > *:hover');
+            addVariant('first-child', '& > *:first-child');
+            addVariant('last-child', '& > *:last-child')
+        }
+    ]
 };
 export default config;
