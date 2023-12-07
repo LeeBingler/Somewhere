@@ -15,3 +15,7 @@
 
     scroll-behavior: smooth;
 }
+
+.titleSectionDescription {
+    @apply mb-10 ml-10 font-Poppins font-extrabold text-[15vw] text-[rgb(37,37,37)] lg:text-[100px];
+}

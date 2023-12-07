@@ -8,4 +8,5 @@ export interface InterfaceDataMyAPI {
     quotes: Array<{ quote: string; author: string }>;
     awards: Array<string>;
     press: Array<{ name: string; quote: string; webpage: string }>;
+    trailer: string;
 }

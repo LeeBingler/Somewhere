@@ -17,7 +17,7 @@ function ImgDescription({
             <img
                 className='w-full h-full object-cover'
                 src={'/Pictures/description/' + filmNameCamelCase + number + '.jpg'}
-                alt=''
+                alt={'Picture of ' + filmName}
             />
         </div>
     );

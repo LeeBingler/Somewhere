@@ -33,8 +33,9 @@ export async function GET() {
                 name: 'The Guardian',
                 quote: 'The visual design is highly distinctive',
                 webpage: 'https://www.theguardian.com/film/2010/mar/04/alice-in-wonderland-review'
-            },
-        ]
+            }
+        ],
+        trailer: 'https://www.youtube.com/watch?v=9POCgSRVvf0&ab_channel=DisneyUK'
     };
 
     return NextResponse.json(data);

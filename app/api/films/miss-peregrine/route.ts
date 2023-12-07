@@ -42,7 +42,8 @@ export async function GET() {
                 webpage:
                     'https://nypost.com/2016/09/29/dont-visit-miss-peregrines-home-for-peculiar-children/'
             }
-        ]
+        ],
+        trailer: 'https://www.youtube.com/watch?v=_BXVJ5wKxV8&ab_channel=20thCenturyStudiosIE'
     };
 
     return NextResponse.json(data);

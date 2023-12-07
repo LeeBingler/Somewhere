@@ -35,7 +35,9 @@ export async function GET() {
                 quote: 'The Nightmare Before Christmas is a stunningly original and visually delightful work of stop-motion animation.',
                 webpage: 'https://www.rottentomatoes.com/m/nightmare_before_christmas'
             }
-        ]
+        ],
+        trailer:
+            'https://www.youtube.com/watch?v=wr6N_hZyBCk&ab_channel=RottenTomatoesClassicTrailers'
     };
 
     return NextResponse.json(data);

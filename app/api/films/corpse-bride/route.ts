@@ -43,7 +43,9 @@ export async function GET() {
                 quote: 'Thankfully, it does get back to a properly Victorian finish at the altar, with melodramatic villainy, sacrifice and a happy resolution.',
                 webpage: 'https://www.empireonline.com/movies/reviews/corpse-bride-review/'
             }
-        ]
+        ],
+        trailer:
+            'https://www.youtube.com/watch?v=AGACeWVdFqo&ab_channel=RottenTomatoesClassicTrailers'
     };
 
     return NextResponse.json(data);
