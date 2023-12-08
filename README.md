@@ -3,6 +3,7 @@
 
 Somewhere is a creative and interactive website to showcase some of the movie by Tim Burton inspired by the design of the website [Nowhere](https://www.nowherehq.com) made by [Le Polish Bureau](https://lepolishbureau.com/).
 
+https://github.com/LeeBingler/Somewhere/assets/98109693/c3b44d3d-6413-4aae-a53c-cc4453bec26b
 
 ## Build
 
